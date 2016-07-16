@@ -1,0 +1,18 @@
+@import "variables";
+
+/* size
+========================================================================== */
+/* block, text, password */
+.wdh-xxs  { width: percentage($xxs / 100); }
+.wdh-xs   { width: percentage($xs / 100); }
+.wdh-s    { width: percentage($s / 100); }
+.wdh-m    { width: percentage($m / 100); }
+.wdh-l    { width: percentage($l / 100); }
+.wdh-xl   { width: percentage($xl / 100); }
+.wdh-xxl  { width: percentage($xxl / 100); }
+.wdh-full { width: percentage($full / 100); }
+
+/* preset
+========================================================================== */
+.text_year { width: 80px; }
+.select_month, .select_day, .select_time { width: 56px; }

@@ -1,17 +1,81 @@
-@import "variables";
+@import "common/variables";
+/*
+ * login
+ *
+########################################################################## */
 
+/* variables / methods
+========================================================================== */
+$stripeWid: 6px;
+$shadowHei: 3px;
+
+/* object
+========================================================================== */
+
+/* style
+========================================================================== */
 #header {
 	background: {
 		color: $mainCL;
 	}
 	color: $textCL_R;
 	height: 200px;
-	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
-	left: 0;
-	overflow: hidden;
-	position: fixed;
+
+	h1 {
+		font-size: 2.5em;
+		line-height: 1.2em;
+		letter-spacing: 10px;
+		text: {
+			align: center;
+			shadow: 2px 2px 2px rgba(0, 0, 0, .4)
+		}
+	}
+
+	p {
+		color: $mainCL_L;
+	}
+}
+
+#nav {
+	box-shadow: 0px $shadowHei $shadowHei rgba(0, 0, 0, .4);
+	margin-bottom: $shadowHei*2 + 40px;
+	background:repeating-linear-gradient(
+			45deg
+			, $mainCL_D
+			, $mainCL_D $stripeWid
+			, darken($mainCL_D, 5%) $stripeWid
+			, darken($mainCL_D, 5%) $stripeWid*2
+	);
+	height: 16px;
+}
+
+#main {
+	margin: 0 auto;
 	text-align: center;
-	top: 0;
-	width: 100%;
-	z-index: 90;
+
+	#form-login {
+		background-color: #FFF;
+		width: 420px;
+
+		p {
+			margin-bottom: 20px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			&.form-login_left {
+				text-align: left;
+				padding-left: percentage((100 - $xl) / 2 / 100);
+			}
+			&.form-login_right {
+				text-align: right;
+				padding-right: percentage((100 - $xl) / 2 / 100);
+			}
+
+			& .login-text {
+				height: 40px;
+				letter-spacing: 3px;
+			}
+		}
+	}
 }

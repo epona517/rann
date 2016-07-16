@@ -2,24 +2,74 @@
  * variables
  *
 ########################################################################## */
-/* color
+/* colors
  *
  *	D: dark
  *	L: light
  *	R: reverse
 ========================================================================== */
+/* size
+========================================================================== */
+/* methods
+========================================================================== */
+/*
+ * login
+ *
+########################################################################## */
+/* variables / methods
+========================================================================== */
+/* object
+========================================================================== */
+/* style
+========================================================================== */
 #header {
   background-color: #3F51B5;
   color: #FFF;
   height: 200px;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
-  left: 0;
-  overflow: hidden;
-  position: fixed;
+}
+#header h1 {
+  font-size: 2.5em;
+  line-height: 1.2em;
+  letter-spacing: 10px;
   text-align: center;
-  top: 0;
-  width: 100%;
-  z-index: 90;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+#header p {
+  color: #C5CAE9;
+}
+
+#nav {
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 46px;
+  background: repeating-linear-gradient(45deg, #303F9F, #303F9F 6px, #2a378b 6px, #2a378b 12px);
+  height: 16px;
+}
+
+#main {
+  margin: 0 auto;
+  text-align: center;
+}
+#main #form-login {
+  background-color: #FFF;
+  width: 420px;
+}
+#main #form-login p {
+  margin-bottom: 20px;
+}
+#main #form-login p:last-of-type {
+  margin-bottom: 0;
+}
+#main #form-login p.form-login_left {
+  text-align: left;
+  padding-left: 12.5%;
+}
+#main #form-login p.form-login_right {
+  text-align: right;
+  padding-right: 12.5%;
+}
+#main #form-login p .login-text {
+  height: 40px;
+  letter-spacing: 3px;
 }
 
 /*# sourceMappingURL=login.css.map */

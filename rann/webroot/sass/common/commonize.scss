@@ -1,3 +1,5 @@
+@import "variables";
+
 /* CSS Reset
 ================================================================ */
 ul {
@@ -15,30 +17,41 @@ h1,h2,h3,h4,h5,h6,p {
 	margin: 0px;
 }
 
+body {
+	background-color: $backCL;
+}
+
+/* object
+================================================================ */
+.card {
+	box-shadow: 4px 4px 4px -3px rgba(0, 0, 0, .4);
+	padding: 24px 0;
+}
 
 /* layout
 ================================================================ */
+/* フロート解除 */
 .clearfix:after {
 	content: "";
 	clear: both;
 	display: block;
 }
 
-/* icon
-================================================================ */
-button span.genericon {
-	font-size: 1.4em;
-	line-height: 1em;
-	position: relative;
-	left: 5px;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+/* 上下中央寄せ */
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-center {
+	margin: 0 auto;
 }
 
 /* function
 ================================================================ */
 .hidden { display: none;}
 .invisible { visibility: hidden; }
-
 
 /* memo
 ================================================================ */

@@ -1,0 +1,238 @@
+@charset "UTF-8";
+/*
+ * variables
+ *
+########################################################################## */
+/* colors
+ *
+ *	D: dark
+ *	L: light
+ *	R: reverse
+========================================================================== */
+/* size
+========================================================================== */
+/* methods
+========================================================================== */
+/*
+ * Form style
+ *
+########################################################################## */
+/* variables / methods
+========================================================================== */
+input[type="text"],
+input[type="password"],
+textarea,
+select, input[type="button"],
+button {
+  color: #727272;
+  border: 1px solid #B6B6B6;
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  transition: background-color .5s linear , border-color .5s linear;
+}
+
+/* text / select
+========================================================================== */
+input[type="text"],
+input[type="password"],
+select {
+  box-sizing: border-box;
+  height: 30px;
+}
+input[type="text"]:hover
+, input[type="text"]:focus,
+input[type="password"]:hover
+,
+input[type="password"]:focus,
+select:hover
+,
+select:focus {
+  border-color: rgba(1, 82, 118, 0.3);
+  background-color: rgba(172, 228, 254, 0.2);
+  transition: background-color .5s ease-out , border-color .5s ease-out;
+  outline: none;
+}
+
+textarea {
+  outline: none;
+}
+textarea:hover, textareafocus {
+  border-color: rgba(1, 82, 118, 0.3);
+  background-color: rgba(172, 228, 254, 0.2);
+  transition: background-color .5s ease-out , border-color .5s ease-out;
+  outline: none;
+}
+
+select {
+  background-color: #fff;
+  cursor: pointer;
+  line-height: 1.2em;
+  font-size: 0.9em;
+  min-height: 28px;
+  min-width: 48px;
+  outline: none;
+}
+select option {
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+input[placeholder]::-webkit-input-placeholder {
+  color: #B6B6B6;
+  font-size: .8rem;
+}
+
+/* button
+========================================================================== */
+input[type="button"],
+button {
+  border: 1px solid #FFF;
+  background-color: #03A9F4;
+  color: #FFF;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  /* 広がる */
+  /* 白抜き */
+  /* 透過 */
+}
+input[type="button"]:hover,
+button:hover {
+  background-color: rgba(3, 169, 244, 0.5);
+}
+input[type="button"].mortion,
+button.mortion {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.5em;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+input[type="button"].mortion::before, input[type="button"].mortion::after,
+button.mortion::before,
+button.mortion::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: ' ';
+}
+input[type="button"].mortion-spacing:hover,
+button.mortion-spacing:hover {
+  letter-spacing: 2px;
+}
+input[type="button"].mortion-whiteout,
+button.mortion-whiteout {
+  border: 2px solid #03A9F4;
+}
+input[type="button"].mortion-whiteout:hover,
+button.mortion-whiteout:hover {
+  border: 2px solid #03A9F4;
+  background-color: #FFF;
+  color: #03A9F4;
+  text-shadow: none;
+}
+input[type="button"].mortion-transparent,
+button.mortion-transparent {
+  background-color: transparent;
+  border: 2px solid #FFF;
+  color: #FFF;
+}
+input[type="button"].mortion-transparent:hover,
+button.mortion-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* radio / checkbox
+========================================================================== */
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+.radio,
+.checkbox {
+  box-sizing: border-box;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin: 0 20px 8px 0;
+  padding: 8px 8px 8px 42px;
+  vertical-align: middle;
+  -webkit-transition: background-color .2s linear;
+  transition: background-color .2s linear;
+}
+.radio:hover,
+.checkbox:hover {
+  background-color: rgba(3, 169, 244, 0.2);
+}
+.radio:hover:after,
+.checkbox:hover:after {
+  border-color: #03A9F4;
+}
+.radio:before,
+.checkbox:before {
+  -webkit-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  position: absolute;
+  top: 50%;
+  display: block;
+  content: '';
+  opacity: 0;
+}
+.radio:after,
+.checkbox:after {
+  -webkit-transition: border-color .2s linear;
+  transition: border-color .2s linear;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  display: block;
+  margin-top: -10px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #bbb;
+  border-radius: 6px;
+  content: '';
+}
+
+.radio:before {
+  left: 20px;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #03A9F4;
+}
+
+input[type="radio"]:checked + .radio:before {
+  opacity: 1;
+}
+
+.checkbox:before {
+  left: 21px;
+  margin-top: -7px;
+  width: 5px;
+  height: 9px;
+  border-right: 3px solid #03A9F4;
+  border-bottom: 3px solid #03A9F4;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked + .checkbox:before {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=forms.css.map */
