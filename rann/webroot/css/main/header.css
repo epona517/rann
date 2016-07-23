@@ -1,0 +1,36 @@
+/*
+ * home
+ *
+########################################################################## */
+/* variables / methods
+========================================================================== */
+/* object
+========================================================================== */
+/* style
+========================================================================== */
+.header {
+  background-color: #3F51B5;
+  color: #FFF;
+  height: 80px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+.header .system-name {
+  color: #C5CAE9;
+  padding: 4px 0 0 4px;
+}
+.header .view-name {
+  font-size: 2em;
+  line-height: .8em;
+  letter-spacing: 6px;
+  text-align: center;
+}
+.header .header-action {
+  text-align: right;
+  font-size: 1.4em;
+  padding-right: 4px;
+}
+.header .header-action .fa {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=header.css.map */

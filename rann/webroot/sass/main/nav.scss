@@ -1,0 +1,28 @@
+@import "../common/variables";
+/*
+ * home
+ *
+########################################################################## */
+
+/* variables / methods
+========================================================================== */
+$stripeWid: 6px;
+$shadowHei: 3px;
+
+/* object
+========================================================================== */
+
+/* style
+========================================================================== */
+.nav {
+	box-shadow: 0px $shadowHei $shadowHei rgba(0, 0, 0, .4);
+	margin-bottom: $shadowHei*2 + 40px;
+	background:repeating-linear-gradient(
+			45deg
+			, $mainCL_D
+			, $mainCL_D $stripeWid
+			, darken($mainCL_D, 5%) $stripeWid
+			, darken($mainCL_D, 5%) $stripeWid*2
+	);
+	height: 16px;
+}
