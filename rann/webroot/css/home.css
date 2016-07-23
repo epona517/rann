@@ -1,0 +1,74 @@
+.main .menus .card:nth-of-type(3n):after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*
+ * home
+ *
+########################################################################## */
+/* variables / methods
+========================================================================== */
+/* object
+========================================================================== */
+/* style
+========================================================================== */
+.main {
+  margin: 0 auto;
+  text-align: center;
+}
+.main .menus {
+  width: 1024px;
+}
+.main .menus .card {
+  width: 30%;
+  height: 120px;
+  margin: 0 5% 40px 0;
+  display: block;
+  border-radius: 6px;
+}
+.main .menus .card:nth-of-type(3n) {
+  margin-right: 0;
+}
+.main .menus .card h2 {
+  color: #000;
+  margin-bottom: 12px;
+}
+.main .menus .card p {
+  color: #727272;
+  text-align: left;
+  line-height: 1.4em;
+  padding: 0 24px;
+}
+.main .menus .card-linked {
+  cursor: pointer;
+}
+.main .menus .card-linked h2 {
+  transition: color .5s;
+}
+.main .menus .card-linked h2 span {
+  position: relative;
+  display: inline-block;
+}
+.main .menus .card-linked h2 span:after {
+  transition: width .3s;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #03A9F4;
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.main .menus .card-linked:hover h2 {
+  color: #03A9F4;
+}
+.main .menus .card-linked:hover h2 span:after {
+  width: 100%;
+}
+
+/*# sourceMappingURL=home.css.map */
