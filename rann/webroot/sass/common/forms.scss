@@ -87,9 +87,11 @@ button {
 	background-color: $accentCL;
 	color: $textCL_R;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+	transition: background, border .5s;
 
 	&:hover {
 		background-color: rgba($accentCL, .5);
+		border: $secondCL solid 1px;
 	}
 
 	&.mortion {
@@ -119,7 +121,7 @@ button {
 	/* 白抜き */
 	&.mortion-whiteout {
 		border: 2px solid $accentCL;
-		&:hover {
+		&:hover, &:active {
 			border: 2px solid $accentCL;
 			background-color: #FFF;
 			color: $accentCL;

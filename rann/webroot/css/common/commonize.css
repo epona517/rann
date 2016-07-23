@@ -1,18 +1,10 @@
 @charset "UTF-8";
-/*
- * variables
- *
-########################################################################## */
-/* colors
- *
- *	D: dark
- *	L: light
- *	R: reverse
-========================================================================== */
-/* size
-========================================================================== */
-/* methods
-========================================================================== */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
 /* CSS Reset
 ================================================================ */
 ul {
@@ -34,22 +26,25 @@ body {
   background-color: #f2f3f0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* object
 ================================================================ */
 .card {
   box-shadow: 4px 4px 4px -3px rgba(0, 0, 0, 0.4);
   padding: 24px 0;
+  background-color: #FFF;
+}
+
+.tx-center {
+  text-align: center;
 }
 
 /* layout
 ================================================================ */
 /* フロート解除 */
-.clearfix:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
 /* 上下中央寄せ */
 .flex {
   display: flex;
@@ -59,6 +54,10 @@ body {
 
 .box-center {
   margin: 0 auto;
+}
+
+.float-l {
+  float: left;
 }
 
 /* function

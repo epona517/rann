@@ -15,6 +15,8 @@ common.init = function($) {
 
 };
 
+// METHODS
+// ======================================================================
 
 common.submit = function(action, params) {
 
@@ -23,7 +25,7 @@ common.submit = function(action, params) {
 		urlParam = '/' + params.join('/')
 	}
 	var myself = $('#myself').val();
-	var rootPath = $('#rootPath').val();
+	var rootPath = $('#root').val();
 	var form = document.getElementById(myself + 'Form');
 
 	// console.log(rootPath + myself + action + urlParam);

@@ -1,6 +1,6 @@
 <script>
-	$(function() {
+	(function($) {
 		common.init();
 		<?= $this->fetch('myself') . '.init()'; ?>
-	});
+	})(jQuery);
 </script>

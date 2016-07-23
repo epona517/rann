@@ -1,19 +1,5 @@
 @charset "UTF-8";
 /*
- * variables
- *
-########################################################################## */
-/* colors
- *
- *	D: dark
- *	L: light
- *	R: reverse
-========================================================================== */
-/* size
-========================================================================== */
-/* methods
-========================================================================== */
-/*
  * Form style
  *
 ########################################################################## */
@@ -97,6 +83,7 @@ button {
   background-color: #03A9F4;
   color: #FFF;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: background, border .5s;
   /* 広がる */
   /* 白抜き */
   /* 透過 */
@@ -104,6 +91,7 @@ button {
 input[type="button"]:hover,
 button:hover {
   background-color: rgba(3, 169, 244, 0.5);
+  border: #727272 solid 1px;
 }
 input[type="button"].mortion,
 button.mortion {
@@ -134,8 +122,9 @@ input[type="button"].mortion-whiteout,
 button.mortion-whiteout {
   border: 2px solid #03A9F4;
 }
-input[type="button"].mortion-whiteout:hover,
-button.mortion-whiteout:hover {
+input[type="button"].mortion-whiteout:hover, input[type="button"].mortion-whiteout:active,
+button.mortion-whiteout:hover,
+button.mortion-whiteout:active {
   border: 2px solid #03A9F4;
   background-color: #FFF;
   color: #03A9F4;
