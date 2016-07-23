@@ -14,7 +14,7 @@ $shadowHei: 3px;
 
 /* style
 ========================================================================== */
-#header {
+.header {
 	background: {
 		color: $mainCL;
 	}
@@ -36,7 +36,7 @@ $shadowHei: 3px;
 	}
 }
 
-#nav {
+.nav {
 	box-shadow: 0px $shadowHei $shadowHei rgba(0, 0, 0, .4);
 	margin-bottom: $shadowHei*2 + 40px;
 	background:repeating-linear-gradient(
@@ -49,11 +49,11 @@ $shadowHei: 3px;
 	height: 16px;
 }
 
-#main {
+.main {
 	margin: 0 auto;
 	text-align: center;
 
-	#form-login {
+	.form-login {
 		background-color: #FFF;
 		width: 420px;
 
