@@ -63,6 +63,8 @@ use Cake\Network\Request;
 use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
+// add 2016.07.18 tds
+use Cake\Core\Configure\Engine\IniConfig;
 
 /**
  * Read configuration file and inject configuration into various
@@ -75,6 +77,10 @@ use Cake\Utility\Security;
 try {
     Configure::config('default', new PhpConfig());
     Configure::load('app', 'default', false);
+
+    // add 2016.07.18 tds 2STP
+    Configure::load('const/AppConstants', 'default');
+    Configure::load('message', 'ini', false);
 } catch (\Exception $e) {
     exit($e->getMessage() . "\n");
 }
@@ -96,7 +102,8 @@ if (!Configure::read('debug')) {
  * Set server timezone to UTC. You can change it to another timezone of your
  * choice but using UTC makes time calculations / conversions easier.
  */
-date_default_timezone_set('UTC');
+// date_default_timezone_set('UTC');
+date_default_timezone_set('Asia/Tokyo');
 
 /**
  * Configure the mbstring extension to use the correct encoding.
