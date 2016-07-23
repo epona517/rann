@@ -40,20 +40,18 @@
 			<div id="user" class="user float-l">
 				<!--<section id="customer" class="customer card tx-center">-->
 				<section id="customer" class="customer card">
-					<p>
-						<span><?= $this->Material->icon('user') ?></span>
-						<?=
-							// 顧客名
-							$this->Form->input('form.customerName', [
-								'type' => 'text',
-								'value' => '',
-								'maxlength' => 45,
-								'class' => 'wdh-xl',
-								'placeholder' => '顧客名',
-								'div' => false,
-							]);
-						?>
-					</p>
+					<?= $this->Material->icon('user') ?>
+					<?=
+						// 顧客名
+						$this->Form->input('form.customerName', [
+							'type' => 'text',
+							'value' => '',
+							'maxlength' => 45,
+							'class' => 'wdh-xxl',
+							'placeholder' => '顧客名',
+							'div' => false,
+						]);
+					?>
 				</section>
 				<!--<section id="car" class="car card tx-center">-->
 				<section id="car" class="car card">
@@ -63,7 +61,7 @@
 							'type' => 'select',
 							'options' => array('1' => 'その1', '2' => 'その2', '3' => 'その3'),
 							'selected' => '2',
-							'class' => 'wdh-xl',
+							'class' => 'wdh-xxl',
 							'div' => false,
 							// 空白を許可
 							// TODO: モードによって切り替え
@@ -127,26 +125,13 @@
 			</section>
 		</nav>
 
-		<section id="titles" class="titles">
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</section>
-
 		<? $size = 4; ?>
 		<section id="requests" class="requests card">
 			<? for ($i = 0; $i < $size; $i++) : ?>
-				<section class="clearfix">
+				<section class="clearfix zebra">
 					<ul class="flex">
 						<li class="editing float-l">
-							○
+							<?= $this->Material->icon('pencil') ?>
 						</li>
 						<li class="from float-l">
 							<?=

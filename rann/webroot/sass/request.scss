@@ -48,6 +48,9 @@ $requstsWidthList: 2.5% 11.25% 2.5% 11.25% 47.5% 10% 5% 10%;
 
 				section {
 					height: $baseHeight;
+					padding-left: 4px;
+					font-size: 1.2em;
+					color: $secondCL;
 
 					input, select {
 						margin-top: $baseMarginT;
@@ -94,7 +97,6 @@ $requstsWidthList: 2.5% 11.25% 2.5% 11.25% 47.5% 10% 5% 10%;
 		$requestsPadd: 8px;
 		.requests {
 			width: 100%;
-			padding: $requestsPadd 0;
 
 			@for $i from 1 through length($requstsWidthList) {
 				li:nth-child(#{$i}) {
@@ -104,6 +106,10 @@ $requstsWidthList: 2.5% 11.25% 2.5% 11.25% 47.5% 10% 5% 10%;
 			section {
 				padding: $requestsPadd;
 				text-align: center;
+
+				.time-separator {
+					color: $secondCL;
+				}
 
 				div.status {
 					color: $secondCL;
@@ -134,7 +140,7 @@ $requstsWidthList: 2.5% 11.25% 2.5% 11.25% 47.5% 10% 5% 10%;
 					}
 				}
 
-				.history {
+				.editing, .history {
 					font-size: 1.3em;
 
 					.fa {

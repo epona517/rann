@@ -35,6 +35,9 @@
 }
 .main .form-request .request-header .user section {
   height: 46px;
+  padding-left: 4px;
+  font-size: 1.2em;
+  color: #727272;
 }
 .main .form-request .request-header .user section input, .main .form-request .request-header .user section select {
   margin-top: 8px;
@@ -68,7 +71,6 @@
 }
 .main .form-request .requests {
   width: 100%;
-  padding: 8px 0;
 }
 .main .form-request .requests li:nth-child(1) {
   width: 2.5%;
@@ -97,6 +99,9 @@
 .main .form-request .requests section {
   padding: 8px;
   text-align: center;
+}
+.main .form-request .requests section .time-separator {
+  color: #727272;
 }
 .main .form-request .requests section div.status {
   color: #727272;
@@ -129,10 +134,10 @@
   color: #4CAF50;
   border-color: #4CAF50;
 }
-.main .form-request .requests section .history {
+.main .form-request .requests section .editing, .main .form-request .requests section .history {
   font-size: 1.3em;
 }
-.main .form-request .requests section .history .fa {
+.main .form-request .requests section .editing .fa, .main .form-request .requests section .history .fa {
   margin-right: 8px;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.35);
   cursor: pointer;

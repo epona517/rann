@@ -72,7 +72,7 @@ select option {
 
 input[placeholder]::-webkit-input-placeholder {
   color: #B6B6B6;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 /* button

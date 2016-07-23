@@ -42,6 +42,10 @@ a {
   text-align: center;
 }
 
+.zebra:nth-child(even) {
+  background-color: #efefef;
+}
+
 /* layout
 ================================================================ */
 /* フロート解除 */
