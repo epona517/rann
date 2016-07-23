@@ -1,0 +1,79 @@
+@charset "UTF-8";
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* CSS Reset
+================================================================ */
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #f2f3f0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* object
+================================================================ */
+.card {
+  box-shadow: 4px 4px 4px -3px rgba(0, 0, 0, 0.4);
+  padding: 24px 0;
+  background-color: #FFF;
+}
+
+.tx-center {
+  text-align: center;
+}
+
+/* layout
+================================================================ */
+/* フロート解除 */
+/* 上下中央寄せ */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-center {
+  margin: 0 auto;
+}
+
+.float-l {
+  float: left;
+}
+
+/* function
+================================================================ */
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* memo
+================================================================ */
+.cake-debug-output {
+  z-index: 9999;
+}
+
+/*# sourceMappingURL=commonize.css.map */
