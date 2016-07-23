@@ -36,5 +36,9 @@ class AppView extends View
      */
     public function initialize()
     {
+        // TODO: Kobito テンプレートのカスタマイズ
+        $this->loadHelper('Form', [
+            'templates' => 'templates_custom'
+        ]);
     }
 }
