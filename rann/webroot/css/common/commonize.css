@@ -43,7 +43,7 @@ a {
 }
 
 .zebra:nth-child(even) {
-  background-color: #efefef;
+  background-color: #f2f3f0;
 }
 
 /* layout

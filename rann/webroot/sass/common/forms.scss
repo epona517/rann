@@ -88,6 +88,7 @@ button {
 	color: $textCL_R;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
 	transition: background, border .5s;
+	outline: none;
 
 	&:hover {
 		background-color: rgba($accentCL, .5);
@@ -143,79 +144,79 @@ button {
 
 /* radio / checkbox
 ========================================================================== */
-input[type="radio"],
-input[type="checkbox"] {
-	display: none;
-}
+// input[type="radio"],
+// input[type="checkbox"] {
+// 	display: none;
+// }
 
-.radio,
-.checkbox {
-	box-sizing: border-box;
-	border-radius: 6px;
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	margin: 0 20px 8px 0;
-	padding: 8px 8px 8px 42px;
-	vertical-align: middle;
-	-webkit-transition: background-color .2s linear;
-	transition: background-color .2s linear;
+// .radio,
+// .checkbox {
+// 	box-sizing: border-box;
+// 	border-radius: 6px;
+// 	cursor: pointer;
+// 	display: inline-block;
+// 	position: relative;
+// 	margin: 0 20px 8px 0;
+// 	padding: 8px 8px 8px 42px;
+// 	vertical-align: middle;
+// 	-webkit-transition: background-color .2s linear;
+// 	transition: background-color .2s linear;
 
-	&:hover {
-		background-color: rgba($accentCL, 0.2);
+// 	&:hover {
+// 		background-color: rgba($accentCL, 0.2);
 
-		&:after {
-			border-color: $accentCL;
-		}
-	}
-	&:before {
-		-webkit-transition: opacity .2s linear;
-		transition: opacity .2s linear;
-		position: absolute;
-		top: 50%;
-		display: block;
-		content: '';
-		opacity: 0;
-	}
-	&:after {
-		-webkit-transition: border-color .2s linear;
-		transition: border-color .2s linear;
-		position: absolute;
-		top: 50%;
-		left: 15px;
-		display: block;
-		margin-top: -10px;
-		width: 16px;
-		height: 16px;
-		border: 2px solid #bbb;
-		border-radius: 6px;
-		content: '';
-	}
-}
+// 		&:after {
+// 			border-color: $accentCL;
+// 		}
+// 	}
+// 	&:before {
+// 		-webkit-transition: opacity .2s linear;
+// 		transition: opacity .2s linear;
+// 		position: absolute;
+// 		top: 50%;
+// 		display: block;
+// 		content: '';
+// 		opacity: 0;
+// 	}
+// 	&:after {
+// 		-webkit-transition: border-color .2s linear;
+// 		transition: border-color .2s linear;
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 15px;
+// 		display: block;
+// 		margin-top: -10px;
+// 		width: 16px;
+// 		height: 16px;
+// 		border: 2px solid #bbb;
+// 		border-radius: 6px;
+// 		content: '';
+// 	}
+// }
 
-.radio:before {
-	left: 20px;
-	margin-top: -5px;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background-color: $accentCL;
-}
-input[type="radio"]:checked + .radio:before {
-  opacity: 1;
-}
+// .radio:before {
+// 	left: 20px;
+// 	margin-top: -5px;
+// 	width: 10px;
+// 	height: 10px;
+// 	border-radius: 50%;
+// 	background-color: $accentCL;
+// }
+// input[type="radio"]:checked + .radio:before {
+//   opacity: 1;
+// }
 
-.checkbox:before {
-	left: 21px;
-	margin-top: -7px;
-	width: 5px;
-	height: 9px;
-	border-right: 3px solid $accentCL;
-	border-bottom: 3px solid $accentCL;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-input[type="checkbox"]:checked + .checkbox:before {
-  opacity: 1;
-}
+// .checkbox:before {
+// 	left: 21px;
+// 	margin-top: -7px;
+// 	width: 5px;
+// 	height: 9px;
+// 	border-right: 3px solid $accentCL;
+// 	border-bottom: 3px solid $accentCL;
+// 	-webkit-transform: rotate(45deg);
+// 	-ms-transform: rotate(45deg);
+// 	transform: rotate(45deg);
+// }
+// input[type="checkbox"]:checked + .checkbox:before {
+//   opacity: 1;
+// }

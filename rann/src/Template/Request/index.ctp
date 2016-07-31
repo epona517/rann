@@ -4,41 +4,63 @@
 <section id="form-request" class="form-request box-center">
 	<form id='<?= h($app['myself']) . 'Form'?>' method="post">
 		<header id="request-header" class="request-header clearfix">
-			<section id="date" class="date card float-l">
-				<?
-					$labelY = '年';
-					echo $this->Form->year('form.year', [
-						'value' => '',
-						'class' => 'date-year',
-						'data-default' => date('Y'),
-						'empty' => false,
-						'minYear' => date('Y') - 1,
-						'maxYear' => date('Y') + 1
-					])
-					. '<span>' . $labelY . '</span>';
-					// 月
-					$labelM = '月';
-					echo $this->Form->month('form.month', [
-						'value' => '',
-						'class' => 'date-month',
-						'data-default' => date('m'),
-						'monthNames' => false,
-						'empty' => false,
-					])
-					. '<span>' . $labelM . '</span>';
-					// 日
-					$labelD = '日';
-					echo $this->Form->day('form.day', [
-						'value' => '',
-						'class' => 'date-day',
-						'data-default' => date('d'),
-						'empty' => false,
-					])
-					. '<span>' . $labelD . '</span>';
-				?>
+			<section id="date" class="date card float-l clearfix flex">
+				<div class="date-inner date-prev float-l tx-center">
+					<button type="button" id="button-prev" class="wdh-xl">
+						<?= $this->Material->icon('arrow-circle-left') ?>
+						前日
+					</button>
+				</div>
+				<div class="date-inner date-select float-l tx-center">
+					<?
+						$labelY = '年';
+						echo $this->Form->year('form.year', [
+							'value' => '',
+							'class' => 'date-year',
+							'data-default' => date('Y'),
+							'empty' => false,
+							'minYear' => date('Y') - 1,
+							'maxYear' => date('Y') + 1
+						])
+						. '<span>' . $labelY . '</span>';
+						// 月
+						$labelM = '月';
+						echo $this->Form->month('form.month', [
+							'value' => '',
+							'class' => 'date-month',
+							'data-default' => date('m'),
+							'monthNames' => false,
+							'empty' => false,
+						])
+						. '<span>' . $labelM . '</span>';
+						// 日
+						$labelD = '日';
+						echo $this->Form->day('form.day', [
+							'value' => '',
+							'class' => 'date-day',
+							'data-default' => date('d'),
+							'empty' => false,
+						])
+						. '<span>' . $labelD . '</span>';
+						// 曜日
+						echo '<span>('
+							. $this->Material->jpWeekName(date('Y-m-d'))
+							. ')</span>';
+					?>
+					<div class="button-confirm">
+						<button type="button" id="button-confirm" class="wdh-xl">
+							表示
+						</button>
+					</div>
+				</div>
+				<div class="date-inner date-next float-l tx-center">
+					<button type="button" id="button-next" class="wdh-xl">
+						翌日
+						<?= $this->Material->icon('arrow-circle-right') ?>
+					</button>
+				</div>
 			</section>
-			<div id="user" class="user float-l">
-				<!--<section id="customer" class="customer card tx-center">-->
+			<section id="user" class="user float-l">
 				<section id="customer" class="customer card">
 					<?= $this->Material->icon('user') ?>
 					<?=
@@ -49,11 +71,9 @@
 							'maxlength' => 45,
 							'class' => 'wdh-xxl',
 							'placeholder' => '顧客名',
-							'div' => false,
 						]);
 					?>
 				</section>
-				<!--<section id="car" class="car card tx-center">-->
 				<section id="car" class="car card">
 					<?= $this->Material->icon('car') ?>
 					<?=
@@ -62,38 +82,40 @@
 							'options' => array('1' => 'その1', '2' => 'その2', '3' => 'その3'),
 							'selected' => '2',
 							'class' => 'wdh-xxl',
-							'div' => false,
 							// 空白を許可
 							// TODO: モードによって切り替え
 							// 'empty' => true
 						]);
 					?>
 				</section>
-			</div>
+			</section>
 		</header>
 
 		<nav id="request-nav" class="request-nav clearfix">
 			<section id="action" class="action card float-l">
 				<ul class="action-buttons clearfix">
 					<li class="float-l wdh-xs">
-						<button type="button" id="button-plus"
-								class="wdh-full">
+						<button type="button" id="button-plus" class="wdh-full">
 							<?= $this->Material->icon('plus-square') ?>
 							行追加
 						</button>
 					</li>
 					<li class="float-l wdh-xs">
-						<button type="button" id="button-preserve"
-								class="wdh-full">
+						<button type="button" id="button-preserve" class="wdh-full">
 							<?= $this->Material->icon('floppy-o') ?>
 							保存
 						</button>
 					</li>
 					<li class="float-l wdh-xs">
-						<button type="button" id="button-request"
-								class="wdh-full">
+						<button type="button" id="button-request" class="wdh-full">
 							<?= $this->Material->icon('car') ?>
 							依頼
+						</button>
+					</li>
+					<li class="float-l wdh-xs">
+						<button type="button" id="button-cancel" class="wdh-full">
+							<?= $this->Material->icon('ban'); ?>
+							ｷｬﾝｾﾙ
 						</button>
 					</li>
 				</ul>
@@ -125,27 +147,45 @@
 			</section>
 		</nav>
 
-		<? $size = 4; ?>
+		<? $size = 5; ?>
 		<section id="requests" class="requests card">
 			<? for ($i = 0; $i < $size; $i++) : ?>
 				<section class="clearfix zebra">
 					<ul class="flex">
+						<li class="target float-l">
+							<?=
+								$this->Form->input("form.$i.target", [
+									'type' => 'checkbox',
+									'value' => '',
+									'id' => "check-session-$i",
+									'label' => [
+										'class' => 'label-target',
+										'text' => ''
+									],
+									'checked' => false,
+									'hiddenField' => false
+								]);
+							?>
+						</li>
 						<li class="editing float-l">
 							<?= $this->Material->icon('pencil') ?>
 						</li>
 						<li class="from float-l">
 							<?=
 								// 開始時刻
-								$this->Form->time("form.$i.from", [
-									'interval' => 5,
+								$this->Form->hour("form.$i.from", [
+									'value' => '0',
+									'class' => 'form-time form-hour',
+									'empty' => false
+								]);
+							?>
+							<span>:</span>
+							<?=
+								$this->Form->minute("form.$i.from", [
+									'value' => '0',
+									'class' => 'form-time form-minute',
 									'empty' => false,
-									'value' => '0:0',
-									'hour' => [
-										'class' => 'form-time time-hour'
-									],
-									'minute' => [
-										'calss' => 'form-time time-minute'
-									]
+									'interval' => 5
 								]);
 							?>
 						</li>
@@ -155,16 +195,19 @@
 						<li class="from float-l">
 							<?=
 								// 終了時刻
-								$this->Form->time("form.$i.to", [
-									'interval' => 5,
+								$this->Form->hour("form.$i.to", [
+									'value' => '0',
+									'class' => 'form-time form-hour',
+									'empty' => false
+								]);
+							?>
+							<span>:</span>
+							<?=
+								$this->Form->minute("form.$i.to", [
+									'value' => '0',
+									'class' => 'form-time form-minute',
 									'empty' => false,
-									'value' => '0:0',
-									'hour' => [
-										'class' => 'form-time form-hour'
-									],
-									'minute' => [
-										'calss' => 'form-time form-minute'
-									]
+									'interval' => 5
 								]);
 							?>
 						</li>
@@ -188,12 +231,6 @@
 						</li>
 						<li class="history float-l">
 							<?= $this->Material->icon('history'); ?>
-						</li>
-						<li class="cancel float-l">
-							<button type="button" class="wdh-full">
-								<?= $this->Material->icon('ban'); ?>
-								ｷｬﾝｾﾙ
-							</button>
 						</li>
 					</ul>
 				</section>

@@ -34,8 +34,18 @@
 			</button>
 		</p>
 		<p class="form-login_left">
-			<input type="checkbox" id="check-session" name="form.session">
-			<label for="check-session" class="checkbox">ログインしたまま</label>
+			<?=
+				$this->Form->input('form.session', [
+					'type' => 'checkbox',
+					'value' => '',
+					'id' => 'check-session',
+					'label' => [
+						'class' => 'checkbox',
+						'text' => 'ログインしたまま'
+					],
+					'hiddenField' => false
+				]);
+			?>
 		</p>
 	</form>
 </section>

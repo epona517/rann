@@ -9,9 +9,14 @@
 $baseHeight: 46px;
 $baseMarginB: 12px;
 $baseMarginT: 8px;
+
+$dateWidthList: 20% 60% 20%;
 // 1:Edit, 2:from, 3:>, 4:to, 5:Destination,
 // 6:Status, 7:History, 8:Cancel, 9:Setting
-$requstsWidthList: 2.5% 11.25% 2.5% 11.25% 47.5% 10% 5% 10%;
+
+// 1:Target, 2:Edit, 3:from, 4:>, 5:to,
+// 6:Destination, 7:Status, 8:History
+$requstsWidthList: 3.75% 3.25% 12% 2% 12% 50% 12% 5%;
 
 @mixin colorStatus($color) {
 	color: $color;
@@ -41,6 +46,21 @@ $requstsWidthList: 2.5% 11.25% 2.5% 11.25% 47.5% 10% 5% 10%;
 				width: 57.5%;
 				height: 100px;
 				margin-right: 2.5%;
+
+				@for $i from 1 through length($dateWidthList) {
+					.date-inner:nth-child(#{$i}) {
+						width: nth($dateWidthList, $i);
+					}
+				}
+
+				.date-select {
+					span {
+						margin: 0 4px;
+					}
+					.button-confirm {
+						margin-top: 8px;
+					}
+				}
 			}
 
 			.user {

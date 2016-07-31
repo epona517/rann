@@ -30,6 +30,21 @@
   height: 100px;
   margin-right: 2.5%;
 }
+.main .form-request .request-header .date .date-inner:nth-child(1) {
+  width: 20%;
+}
+.main .form-request .request-header .date .date-inner:nth-child(2) {
+  width: 60%;
+}
+.main .form-request .request-header .date .date-inner:nth-child(3) {
+  width: 20%;
+}
+.main .form-request .request-header .date .date-select span {
+  margin: 0 4px;
+}
+.main .form-request .request-header .date .date-select .button-confirm {
+  margin-top: 8px;
+}
 .main .form-request .request-header .user {
   width: 40%;
 }
@@ -73,28 +88,28 @@
   width: 100%;
 }
 .main .form-request .requests li:nth-child(1) {
-  width: 2.5%;
+  width: 3.75%;
 }
 .main .form-request .requests li:nth-child(2) {
-  width: 11.25%;
+  width: 3.25%;
 }
 .main .form-request .requests li:nth-child(3) {
-  width: 2.5%;
+  width: 12%;
 }
 .main .form-request .requests li:nth-child(4) {
-  width: 11.25%;
+  width: 2%;
 }
 .main .form-request .requests li:nth-child(5) {
-  width: 47.5%;
+  width: 12%;
 }
 .main .form-request .requests li:nth-child(6) {
-  width: 10%;
+  width: 50%;
 }
 .main .form-request .requests li:nth-child(7) {
-  width: 5%;
+  width: 12%;
 }
 .main .form-request .requests li:nth-child(8) {
-  width: 10%;
+  width: 5%;
 }
 .main .form-request .requests section {
   padding: 8px;

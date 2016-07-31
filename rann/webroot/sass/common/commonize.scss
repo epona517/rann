@@ -38,7 +38,8 @@ a {
 }
 
 .zebra:nth-child(even) {
-	background-color: lighten($secondCL_L, 22.5%);
+	// background-color: lighten($secondCL_L, 22.5%);
+	background-color: $backCL;
 }
 
 /* layout
