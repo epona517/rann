@@ -23,7 +23,7 @@
   /** Buttons */
 }
 .main .form-request .request-header {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .main .form-request .request-header .date {
   width: 57.5%;
@@ -61,7 +61,7 @@
   margin-top: 8px;
 }
 .main .form-request .request-nav {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .main .form-request .request-nav .action {
   height: 46px;
