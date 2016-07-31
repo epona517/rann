@@ -1,0 +1,87 @@
+@import "common/variables";
+/*
+ * approve
+ *
+########################################################################## */
+
+/* variables / methods
+========================================================================== */
+$baseHeight: 46px;
+$baseMarginB: 16px;
+$baseMarginT: 8px;
+
+$dateWidthList: 20% 60% 20%;
+
+// 1:Target, 2:Edit, 3:from, 4:>, 5:to,
+// 6:Destination, 7:Status, 8:History
+$requstsWidthList: 3.75% 3.25% 12% 2% 12% 50% 12% 5%;
+
+@mixin colorStatus($color) {
+	color: $color;
+	border-color: $color;
+}
+
+/* object
+========================================================================== */
+.card {
+	padding: 0;
+}
+
+/* style
+========================================================================== */
+.main {
+	margin: 0 auto;
+
+	/** Whole Form */
+	.form-approve {
+		width: 1024px;
+
+		/** Header (Date, User) */
+		.approve-header {
+			margin-bottom: $baseMarginB;
+
+			.date {
+				width: 57.5%;
+				height: 100px;
+				margin-right: 2.5%;
+
+				@for $i from 1 through length($dateWidthList) {
+					.date-inner:nth-child(#{$i}) {
+						width: nth($dateWidthList, $i);
+					}
+				}
+			}
+
+			.user {
+				width: 40%;
+			}
+		}
+
+		/** Buttons */
+		.approve-nav {
+			margin-bottom: $baseMarginB;
+
+			.action {
+				height: $baseHeight;
+				width: 72.5%;
+				margin-right: 2.5%;
+			}
+
+			.copy {
+				height: $baseHeight;
+				width: 25%;
+			}
+		}
+
+		$approvesPadd: 8px;
+		.approves {
+			width: 100%;
+
+			@for $i from 1 through length($requstsWidthList) {
+				li:nth-child(#{$i}) {
+					width: nth($requstsWidthList, $i);
+				}
+			}
+		}
+	}
+}

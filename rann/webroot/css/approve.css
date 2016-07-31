@@ -1,0 +1,84 @@
+/*
+ * approve
+ *
+########################################################################## */
+/* variables / methods
+========================================================================== */
+/* object
+========================================================================== */
+.card {
+  padding: 0;
+}
+
+/* style
+========================================================================== */
+.main {
+  margin: 0 auto;
+  /** Whole Form */
+}
+.main .form-approve {
+  width: 1024px;
+  /** Header (Date, User) */
+  /** Buttons */
+}
+.main .form-approve .approve-header {
+  margin-bottom: 16px;
+}
+.main .form-approve .approve-header .date {
+  width: 57.5%;
+  height: 100px;
+  margin-right: 2.5%;
+}
+.main .form-approve .approve-header .date .date-inner:nth-child(1) {
+  width: 20%;
+}
+.main .form-approve .approve-header .date .date-inner:nth-child(2) {
+  width: 60%;
+}
+.main .form-approve .approve-header .date .date-inner:nth-child(3) {
+  width: 20%;
+}
+.main .form-approve .approve-header .user {
+  width: 40%;
+}
+.main .form-approve .approve-nav {
+  margin-bottom: 16px;
+}
+.main .form-approve .approve-nav .action {
+  height: 46px;
+  width: 72.5%;
+  margin-right: 2.5%;
+}
+.main .form-approve .approve-nav .copy {
+  height: 46px;
+  width: 25%;
+}
+.main .form-approve .approves {
+  width: 100%;
+}
+.main .form-approve .approves li:nth-child(1) {
+  width: 3.75%;
+}
+.main .form-approve .approves li:nth-child(2) {
+  width: 3.25%;
+}
+.main .form-approve .approves li:nth-child(3) {
+  width: 12%;
+}
+.main .form-approve .approves li:nth-child(4) {
+  width: 2%;
+}
+.main .form-approve .approves li:nth-child(5) {
+  width: 12%;
+}
+.main .form-approve .approves li:nth-child(6) {
+  width: 50%;
+}
+.main .form-approve .approves li:nth-child(7) {
+  width: 12%;
+}
+.main .form-approve .approves li:nth-child(8) {
+  width: 5%;
+}
+
+/*# sourceMappingURL=approve.css.map */
