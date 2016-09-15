@@ -39,21 +39,12 @@ $requstsWidthList: 3.75% 3.25% 12% 2% 12% 50% 12% 5%;
 		/** Header (Date, User) */
 		.approve-header {
 			margin-bottom: $baseMarginB;
-
-			.date {
-				width: 57.5%;
-				height: 100px;
-				margin-right: 2.5%;
-
-				@for $i from 1 through length($dateWidthList) {
-					.date-inner:nth-child(#{$i}) {
-						width: nth($dateWidthList, $i);
-					}
-				}
-			}
-
-			.user {
+			#conditions {
 				width: 40%;
+			}
+			#options {
+				width: 60%;
+				text-align: center;
 			}
 		}
 

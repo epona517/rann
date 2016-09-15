@@ -24,22 +24,12 @@
 .main .form-approve .approve-header {
   margin-bottom: 16px;
 }
-.main .form-approve .approve-header .date {
-  width: 57.5%;
-  height: 100px;
-  margin-right: 2.5%;
-}
-.main .form-approve .approve-header .date .date-inner:nth-child(1) {
-  width: 20%;
-}
-.main .form-approve .approve-header .date .date-inner:nth-child(2) {
-  width: 60%;
-}
-.main .form-approve .approve-header .date .date-inner:nth-child(3) {
-  width: 20%;
-}
-.main .form-approve .approve-header .user {
+.main .form-approve .approve-header #conditions {
   width: 40%;
+}
+.main .form-approve .approve-header #options {
+  width: 60%;
+  text-align: center;
 }
 .main .form-approve .approve-nav {
   margin-bottom: 16px;

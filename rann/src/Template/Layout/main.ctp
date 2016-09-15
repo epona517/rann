@@ -5,12 +5,12 @@
 	<title><?= SYS_NAME ?></title>
 	<!--CSS-->
 	<?= $this->Html->css([
-			'lib/normalize', 'lib/font-awesome/css/font-awesome.min'
+			'lib/normalize', 'lib/font-awesome/css/font-awesome.min', 'lib/jquery-ui.min'
 			, 'common/commonize', 'common/forms', 'common/scale'
 			, 'main/header', 'main/nav'
 			, $this->fetch('myself')]); ?>
 	<!--JS-->
-	<?= $this->Html->script(['lib/jquery-3.1.0.min'
+	<?= $this->Html->script(['lib/jquery-3.1.0.min', 'lib/jquery-ui.min'
 			, 'common', $this->fetch('myself')]); ?>
 </head>
 <body>

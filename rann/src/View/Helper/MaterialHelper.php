@@ -25,4 +25,17 @@ class MaterialHelper extends Helper {
 		$weekdays = array('日', '月', '火', '水', '木', '金', '土');
 		return $weekdays[date('w', strtotime($date))];
 	}
+
+	/**
+	 * モーダルを呼び出す際の要素出力補助
+	 * 引数のIDをもとに、Elementからテンプレートの読み込みと、
+	 * 識別IDを引数に渡す
+	 *
+	 * @param モーダル識別ID
+	 */
+	public function includeModal($modalId) {
+		// Helper内で、Elementを使用する
+		$view = $this->_View;
+		return $view->element('Modal/' . $modalId, array('modalId' => $modalId));
+	}
 }

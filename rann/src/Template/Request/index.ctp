@@ -60,6 +60,7 @@
 					</button>
 				</div>
 			</section>
+
 			<section id="user" class="user float-l">
 				<section id="customer" class="customer card">
 					<?= $this->Material->icon('user') ?>
@@ -74,6 +75,7 @@
 						]);
 					?>
 				</section>
+
 				<section id="car" class="car card">
 					<?= $this->Material->icon('car') ?>
 					<?=

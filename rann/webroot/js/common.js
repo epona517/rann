@@ -1,9 +1,14 @@
 /**
  * common javascript
  */
-var common = common || {};
+// var common = common || {};
+function Common (myself, root) {
+	this.myself = myself;
+	this.root = root;
+};
 
-common.init = function($) {
+
+Common.prototype.init = function($) {
 	// PROCESS
 	// ======================================================================
 
@@ -18,22 +23,38 @@ common.init = function($) {
 // METHODS
 // ======================================================================
 
-common.submit = function(action, params) {
+Common.prototype.submit = function(action, params) {
 
 	var urlParam = '';
 	if (Array.isArray(params)) {
 		urlParam = '/' + params.join('/')
 	}
-	var myself = $('#myself').val();
-	var rootPath = $('#root').val();
-	var form = document.getElementById(myself + 'Form');
 
-	// console.log(rootPath + myself + action + urlParam);
-	form.action = rootPath + '/' + myself + '/' + action + urlParam;
+	var form = document.getElementById(this.myself + 'Form');
+
+	form.action = this.root + '/' + this.myself + '/' + action + urlParam;
 	form.submit();
 };
 
-common.isPressedEnter = function(e) {
+Common.prototype.isPressedEnter = function(e) {
 
 	return e.keyCode == 13;
 };
+
+Common.prototype.modalOptionsDef = {
+	modal: true,
+	position: {
+		at: 'center top',
+		my: 'center top'
+	},
+	autoOpen: false,
+	show: {
+		easing: 'swing',
+		effect: 'blind'
+	},
+	hide: {
+		duration: 300,
+		easing: 'swing',
+		effect: 'blind'
+	}
+}

@@ -3,3 +3,4 @@
 /tmp/*
 /logs/*
 php_errors.log
+/webroot/css/*.css.map
