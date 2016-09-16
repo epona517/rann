@@ -1,13 +1,13 @@
 /**
  * home javascript
  */
-var common = common || {};
-var home = home || {};
+ function Home () {};
 
+var common = common || {};
 
 // INITIALIZATION
 // ======================================================================
-home.init = function () {
+Home.prototype.init = function () {
 	// PROCESS
 	// ======================================================================
 

@@ -1,19 +1,19 @@
 /**
  * login javascript
  */
-var common = common || {};
-var login = login || {};
+ function Login() {};
 
+var common = common || {};
 
 // INITIALIZATION
 // ======================================================================
-login.init = function () {
+Login.prototype.init = function () {
 	// PROCESS
 	// ======================================================================
 	$('#loginId').focus();
 
 	// ACTION
-	// ======================================================================
+	// ========================================== ============================
 	// 【ログインボタン】押下
 	$('#button-login').click(function() {
 		common.submit('auth');

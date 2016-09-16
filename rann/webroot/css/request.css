@@ -7,10 +7,6 @@
 ========================================================================== */
 /* object
 ========================================================================== */
-.card {
-  padding: 0;
-}
-
 /* style
 ========================================================================== */
 .main {
@@ -94,16 +90,16 @@
   width: 3.25%;
 }
 .main .form-request .requests li:nth-child(3) {
-  width: 12%;
+  width: 13%;
 }
 .main .form-request .requests li:nth-child(4) {
   width: 2%;
 }
 .main .form-request .requests li:nth-child(5) {
-  width: 12%;
+  width: 13%;
 }
 .main .form-request .requests li:nth-child(6) {
-  width: 50%;
+  width: 48%;
 }
 .main .form-request .requests li:nth-child(7) {
   width: 12%;

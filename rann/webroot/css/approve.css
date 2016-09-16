@@ -6,10 +6,6 @@
 ========================================================================== */
 /* object
 ========================================================================== */
-.card {
-  padding: 0;
-}
-
 /* style
 ========================================================================== */
 .main {
@@ -24,12 +20,34 @@
 .main .form-approve .approve-header {
   margin-bottom: 16px;
 }
-.main .form-approve .approve-header #conditions {
-  width: 40%;
+.main .form-approve .approve-header .conditions {
+  padding: 6px 12px;
 }
-.main .form-approve .approve-header #options {
-  width: 60%;
+.main .form-approve .approve-header .conditions dl {
+  float: left;
+  margin: 6px 0;
+}
+.main .form-approve .approve-header .conditions dl dt, .main .form-approve .approve-header .conditions dl dd {
+  display: inline-block;
+  margin: 0;
+  padding: 2px 8px;
+}
+.main .form-approve .approve-header .conditions dl dt {
+  background-color: #f2f3f0;
+  border: 1px solid #B6B6B6;
+  border-radius: 1px;
+  color: #727272;
   text-align: center;
+}
+.main .form-approve .approve-header .conditions dl dd {
+  color: #000;
+  margin-right: 32px;
+  text-align: left;
+}
+.main .form-approve .approve-header .conditions .search {
+  display: inline-block;
+  float: right;
+  width: 120px;
 }
 .main .form-approve .approve-nav {
   margin-bottom: 16px;
@@ -42,33 +60,6 @@
 .main .form-approve .approve-nav .copy {
   height: 46px;
   width: 25%;
-}
-.main .form-approve .approves {
-  width: 100%;
-}
-.main .form-approve .approves li:nth-child(1) {
-  width: 3.75%;
-}
-.main .form-approve .approves li:nth-child(2) {
-  width: 3.25%;
-}
-.main .form-approve .approves li:nth-child(3) {
-  width: 12%;
-}
-.main .form-approve .approves li:nth-child(4) {
-  width: 2%;
-}
-.main .form-approve .approves li:nth-child(5) {
-  width: 12%;
-}
-.main .form-approve .approves li:nth-child(6) {
-  width: 50%;
-}
-.main .form-approve .approves li:nth-child(7) {
-  width: 12%;
-}
-.main .form-approve .approves li:nth-child(8) {
-  width: 5%;
 }
 
 /*# sourceMappingURL=approve.css.map */

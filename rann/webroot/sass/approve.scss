@@ -10,22 +10,9 @@ $baseHeight: 46px;
 $baseMarginB: 16px;
 $baseMarginT: 8px;
 
-$dateWidthList: 20% 60% 20%;
-
-// 1:Target, 2:Edit, 3:from, 4:>, 5:to,
-// 6:Destination, 7:Status, 8:History
-$requstsWidthList: 3.75% 3.25% 12% 2% 12% 50% 12% 5%;
-
-@mixin colorStatus($color) {
-	color: $color;
-	border-color: $color;
-}
-
 /* object
 ========================================================================== */
-.card {
-	padding: 0;
-}
+
 
 /* style
 ========================================================================== */
@@ -39,12 +26,38 @@ $requstsWidthList: 3.75% 3.25% 12% 2% 12% 50% 12% 5%;
 		/** Header (Date, User) */
 		.approve-header {
 			margin-bottom: $baseMarginB;
-			#conditions {
-				width: 40%;
-			}
-			#options {
-				width: 60%;
-				text-align: center;
+
+			.conditions {
+				padding: 6px 12px;
+
+				dl {
+					float: left;
+					margin: 6px 0;
+
+					dt, dd {
+						display: inline-block;
+						margin: 0;
+						padding: 2px 8px;
+					}
+					dt {
+						background-color: $backCL;
+						border: 1px solid $secondCL_L;
+						border-radius: 1px;
+						color: $secondCL;
+						text-align: center;
+					}
+					dd {
+						color: $textCL;
+						margin-right: 32px;
+						text-align: left;
+					}
+				}
+
+				.search {
+					display: inline-block;
+					float: right;
+					width: 120px;
+				}
 			}
 		}
 
@@ -64,15 +77,5 @@ $requstsWidthList: 3.75% 3.25% 12% 2% 12% 50% 12% 5%;
 			}
 		}
 
-		$approvesPadd: 8px;
-		.approves {
-			width: 100%;
-
-			@for $i from 1 through length($requstsWidthList) {
-				li:nth-child(#{$i}) {
-					width: nth($requstsWidthList, $i);
-				}
-			}
-		}
 	}
 }

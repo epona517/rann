@@ -29,7 +29,6 @@ a {
 ================================================================ */
 .card {
 	box-shadow: 4px 4px 4px -3px rgba(0, 0, 0, .4);
-	padding: 24px 0;
 	background-color: #FFF;
 }
 
@@ -38,7 +37,6 @@ a {
 }
 
 .zebra:nth-child(even) {
-	// background-color: lighten($secondCL_L, 22.5%);
 	background-color: $backCL;
 }
 

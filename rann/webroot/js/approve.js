@@ -1,7 +1,6 @@
 /**
  * Approve javascript
  */
-
 function Approve () {};
 
 var common = common || {};
@@ -10,11 +9,12 @@ var common = common || {};
 Approve.prototype.init = function () {
 	// PROCESS
 	// ======================================================================
+		Approve.prototype.openSearchModal('approve_search');
 
 	// ACTION
 	// ======================================================================
-	$('#button-modal').click(function() {
-		Approve.prototype.openModal('test');
+	$('#button-set-conditions').click(function() {
+		Approve.prototype.openSearchModal('approve_search');
 	});
 
 	// EVENT
@@ -25,22 +25,32 @@ Approve.prototype.init = function () {
 
 // METHODS
 // ======================================================================
-Approve.prototype.openModal = function(id) {
+Approve.prototype.openSearchModal = function(id) {
 	var options = {
-		title: 'テスト',
-		width: 600,
-		buttons: {
-			'OK': function() {
-				$(this).dialog('close');
+		title: '検索条件設定',
+		width: 760,
+		buttons: [
+			{
+				html: '<i class="fa fa-fw fa-search"></i>' + '検索',
+				id: 'modal-button-search',
+				click: function() {
+					$(this).dialog('close');
+				}
 			},
-			'ｷｬﾝｾﾙ': function() {
-				$(this).dialog('close');
+			{
+				html: 'ｷｬﾝｾﾙ',
+				id: 'modal-button-cancel',
+				click: function() {
+					$(this).dialog('close');
+				}
 			}
-		}
+		]
 	};
 
-	$('#modal_' + id)
-		.dialog(Object.assign(options, common.modalOptionsDef))
-		.html($('#modal_' + id).html())
-		.dialog('open');
+	common.modalOpen(id, options);
+
+	// $('#modal_' + id)
+	// 	.dialog(Object.assign(options, common.modalOptionsDef))
+	// 	.html($('#modal_' + id).html())
+	// 	.dialog('open');
 };

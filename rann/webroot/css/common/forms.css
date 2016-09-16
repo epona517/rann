@@ -92,7 +92,7 @@ button {
 input[type="button"]:hover,
 button:hover {
   background-color: rgba(3, 169, 244, 0.5);
-  border: #727272 solid 1px;
+  border: #C5CAE9 solid 1px;
 }
 input[type="button"].mortion,
 button.mortion {

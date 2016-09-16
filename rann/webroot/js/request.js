@@ -1,13 +1,14 @@
 /**
  * request javascript
  */
+ function Request () {};
+
 var common = common || {};
-var request = request || {};
 
 
 // INITIALIZATION
 // ======================================================================
-request.init = function () {
+Request.prototype.init = function () {
 	// PROCESS
 	// ======================================================================
 

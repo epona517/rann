@@ -8,7 +8,7 @@ function Common (myself, root) {
 };
 
 
-Common.prototype.init = function($) {
+Common.prototype.init = function() {
 	// PROCESS
 	// ======================================================================
 
@@ -50,11 +50,25 @@ Common.prototype.modalOptionsDef = {
 	autoOpen: false,
 	show: {
 		easing: 'swing',
-		effect: 'blind'
+		effect: 'fade'
 	},
 	hide: {
 		duration: 300,
 		easing: 'swing',
-		effect: 'blind'
+		effect: 'fade'
 	}
+}
+
+Common.prototype.modalOpen = function(id, options) {
+
+	var $modal = $('#modal_' + id);
+	if (!$modal.length) {
+		console.log('ModalのHTML要素が存在しません。')
+		return false;
+	}
+
+	$modal
+		.dialog(Object.assign(options, Common.prototype.modalOptionsDef))
+		.html($modal.html())
+		.dialog('open');
 }

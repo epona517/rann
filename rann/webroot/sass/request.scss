@@ -14,7 +14,7 @@ $dateWidthList: 20% 60% 20%;
 
 // 1:Target, 2:Edit, 3:from, 4:>, 5:to,
 // 6:Destination, 7:Status, 8:History
-$requstsWidthList: 3.75% 3.25% 12% 2% 12% 50% 12% 5%;
+$requstsWidthList: 3.75% 3.25% 13% 2% 13% 48% 12% 5%;
 
 @mixin colorStatus($color) {
 	color: $color;
@@ -23,9 +23,6 @@ $requstsWidthList: 3.75% 3.25% 12% 2% 12% 50% 12% 5%;
 
 /* object
 ========================================================================== */
-.card {
-	padding: 0;
-}
 
 /* style
 ========================================================================== */
