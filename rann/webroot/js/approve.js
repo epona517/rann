@@ -9,7 +9,7 @@ var common = common || {};
 Approve.prototype.init = function () {
 	// PROCESS
 	// ======================================================================
-		Approve.prototype.openSearchModal('approve_search');
+	$('.js-btn-group').buttonset();
 
 	// ACTION
 	// ======================================================================
@@ -38,7 +38,7 @@ Approve.prototype.openSearchModal = function(id) {
 				}
 			},
 			{
-				html: 'ｷｬﾝｾﾙ',
+				html: 'キャンセル',
 				id: 'modal-button-cancel',
 				click: function() {
 					$(this).dialog('close');
@@ -48,9 +48,4 @@ Approve.prototype.openSearchModal = function(id) {
 	};
 
 	common.modalOpen(id, options);
-
-	// $('#modal_' + id)
-	// 	.dialog(Object.assign(options, common.modalOptionsDef))
-	// 	.html($('#modal_' + id).html())
-	// 	.dialog('open');
 };

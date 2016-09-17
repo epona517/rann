@@ -44,7 +44,13 @@
 				<dl>
 					<dt>緊急度</dt>
 					<dd id="deadline">
-						高い
+						高
+					</dd>
+				</dl>
+				<dl>
+					<dt>表示順</dt>
+					<dd id="order">
+						顧客順
 					</dd>
 				</dl>
 				<div id="search" class="search">

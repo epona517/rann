@@ -62,4 +62,13 @@
   width: 25%;
 }
 
+/* modal
+========================================================================== */
+#modal_approve_search .form-table dt {
+  width: 15%;
+}
+#modal_approve_search .form-table dl {
+  width: 85%;
+}
+
 /*# sourceMappingURL=approve.css.map */

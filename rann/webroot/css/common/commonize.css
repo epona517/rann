@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.clearfix:after {
+.form-table dl dd:after, .clearfix:after {
   content: "";
   clear: both;
   display: block;
@@ -7,6 +7,12 @@
 
 /* CSS Reset
 ================================================================ */
+html, input, select, textarea,
+input[placeholder]::-webkit-input-placeholder,
+button {
+  font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+}
+
 ul {
   margin: 0px;
   padding: 0px;
@@ -45,6 +51,20 @@ a {
   background-color: #f2f3f0;
 }
 
+.form-table {
+  width: 100%;
+}
+.form-table dl dt, .form-table dl dd {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+}
+.form-table dl dt {
+  float: left;
+}
+
 /* layout
 ================================================================ */
 /* フロート解除 */
@@ -78,5 +98,8 @@ a {
 .cake-debug-output {
   z-index: 9999;
 }
+
+/* jQuery UI modify
+================================================================ */
 
 /*# sourceMappingURL=commonize.css.map */
